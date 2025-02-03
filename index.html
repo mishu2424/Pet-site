@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peddy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-lato m-0">
+    <header>
+      <div
+        class="navbar flex items-center justify-between w-[90vw] mx-auto py-7"
+      >
+        <div class="navbar-img flex items-center gap-3">
+          <img src="./images/logo.webp" alt="" srcset="" />
+          <h3 class="text-xl">Peddy</h3>
+        </div>
+        <div class="navbar-options flex items-center gap-3">
+          <ul class="flex items-center gap-3">
+            <li><a class="">Home</a></li>
+            <li><a class="">Shop</a></li>
+            <li><a class="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="dropdown dropdown-end">
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost btn-circle avatar"
+          >
+            <div class="w-8 rounded-full border p-1">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-full">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      </svg>                       -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-full"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
+            <li>
+              <a class="justify-between">
+                Profile
+                <span class="badge">New</span>
+              </a>
+            </li>
+            <li><a>Settings</a></li>
+            <li><a>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="banner flex flex-col items-center justify-center w-[90vw] mx-auto"
+      >
+        <div class="banner-details text-center space-y-5">
+          <h2 class="text-xl opacity-80">Bringing Families Together ❤️‍🔥</h2>
+          <h1 class="text-5xl">
+            Your Path to Adoption <br />
+            Starts Here
+          </h1>
+          <p class="text-xs opacity-90">
+            Just like humans, pets need exercise to stay fit and happy. Make
+            sure to take your dog for daily walks, <br> and for indoor cats, try
+            interactive toys to get them moving.
+          </p>
+          <a class="btn bg-[#0E7A81] text-white px-8">View More</a>
+        </div>
+        <div class="banner-img">
+          <img src="./images/pet.webp" alt="pet-picture" srcset="" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="adopt-container" class="my-10 space-y-6 w-[80vw] mx-auto">
+        <div id="adoption-header" class="text-center space-y-4">
+          <h3 class="text-2xl font-bold">Adopt Your Best Friend</h3>
+          <p class="text-xs opacity-90">
+            We believe that every pet deserves a loving home. Whether you’re
+            ready to adopt or just exploring, <br />
+            we’re here to help you find the perfect companion
+          </p>
+        </div>
+        <div id="dynamicBtns" class="flex items-center justify-between"></div>
+        <div id="sort-container" class="flex items-center justify-between">
+          <h5 class="text-xl font-extrabold">Best Deal For you</h5>
+          <a id="sortBtn" class="btn px-8 py-2 uppercase text-white bg-[#0E7A81]"
+            >sort by price</a
+          >
+        </div>
+        <div
+          id="main-pet-container"
+          class="grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-2 relative"
+        >
+          <div
+            id="pet-container"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 relative"
+          >
+            <!-- <div id="pet-card" class="p-2 rounded-md border">
+                    <img src="" alt="">
+                    <div class="pet-infos">
+                        <h3 class="text-base font-extrabold"></h3>
+                        <p class="text-xs opacity-80 font-light"><img src="./images/Frame.png" alt="">Breed:</p>
+                        <p class="text-xs opacity-80 font-light"><img src="./images/birthFrame.png" alt="">Birth:</p>
+                        <p class="text-xs opacity-80 font-light"><img src="./images/genderFrame.png" alt="">Gender:</p>
+                        <p class="text-xs opacity-80 font-light"><img src="./images/priceFrame.png" alt="">Price:</p>
+                    </div>
+                    <hr>
+                    <div id="pet-btns">
+                        <a class="btn bg-transparent"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                          </svg>
+                          </a>
+                        <a class="btn bg-transparent text-[#0E7A81]">Adopt</a>
+                        <a class="btn bg-transparent text-[#0E7A81]">Details</a>
+                    </div>
+                </div> -->
+          </div>
+          <div
+            id="pet-pictures"
+            class="border rounded-md grid grid-cols-1 md:grid-cols-2 auto-rows-min gap-2 p-2"
+          >
+          <!-- <span class="countdown font-mono text-6xl">
+            <span style="--value:3;"></span>
+          </span> -->
+        </div>
+          <div id="loading-spinner" class="absolute left-1/2 top-2 hidden">
+            <span class="loading loading-bars loading-lg"></span>
+          </div>
+        </div>
+      </section>
+      <!-- Open the modal using ID.showModal() method -->
+      <button id="showModalData" class="btn hidden" onclick="customModal2.showModal()">open modal</button>
+      <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div id="modal-container">
+
+          </div>
+          <div class="modal-action w-full">
+            <form method="dialog" class="w-full">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn w-full border-[#0E7A81] bg-[#0E7A81] bg-opacity-10 outline-none">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <dialog id="customModal2" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div class="modal-content flex flex-col items-center justify-center">
+            <h2 class="text-xl">Pet Adoption Starts from</h2>
+            <div>
+                <span class="countdown font-mono text-6xl">
+                    <span id="modal-container2" style="--value:3"></span>
+                </span>
+              </div>
+          </div>
+          <div class="modal-action" >
+            <form method="dialog" class="">
+              <!-- if there is a button in form, it will close the modal -->
+              <button id="closeBtn" class="btn outline-none hidden">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </main>
+    <footer
+      class="footer bg-base-200 text-base-content p-10 bg-black text-white flex justify-around"
+    >
+      <aside class="space-y-3">
+        <div class="navbar-img flex items-center gap-3">
+          <img src="./images/logo.webp" alt="" srcset="" />
+          <h3 class="text-xl">Peddy</h3>
+        </div>
+        <div class="text-xs space-y-2 opacity-80">
+          <p class="line-clamp-2">
+            Location: av. Washington 165, <br />
+            NY CA 54003
+          </p>
+          <p>Phone: +31 85 964 47 25</p>
+          <p>Email: info@yourdomain.com</p>
+          <p>Openings hours: 9.00 AM - 5.00 PM</p>
+        </div>
+      </aside>
+      <nav>
+        <h6 class="footer-title opacity-100">Useful links</h6>
+        <a class="link link-hover opacity-80">Branding</a>
+        <a class="link link-hover opacity-80">Design</a>
+        <a class="link link-hover opacity-80">Marketing</a>
+        <a class="link link-hover opacity-80">Advertisement</a>
+      </nav>
+      <div>
+        <h6 class="footer-title opacity-100">Drop a Message</h6>
+        <input
+          type="text"
+          placeholder="Enter Your Email"
+          class="input input-bordered w-full max-w-xs bg-[#131313] bg-opacity-80 placeholder:text-white placeholder:text-xs"
+        />
+        <a class="btn text-white bg-[#0E7A81] border-none w-full">Subscribe</a>
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
