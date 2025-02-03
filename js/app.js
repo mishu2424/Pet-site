@@ -18,8 +18,8 @@ const displayButtons = (data) => {
       "btn",
       "w-fit",
       "h-fit",
-      "px-16",
-      "py-4",
+      "lg:px-16",
+      "lg:py-4",
       "flex",
       "items-center",
       "gap-3",
@@ -93,7 +93,7 @@ const displayDataOnUI = (data) => {
       petCard.classList.add("p-2", "rounded-md", "border", "space-y-3");
       petCard.innerHTML = `
         
-        <img class="rounded-md object-cover object-center h-40 w-full" src="${
+        <img class="rounded-md object-cover h-40 w-full" src="${
           det.image
         }" alt="">
         <div class="pet-infos space-y-2">
@@ -202,7 +202,7 @@ const sendPicturesOnUI = (data) => {
   imgArr.forEach((img) => {
     const childPet = document.createElement("div");
     childPet.innerHTML = `
-    <img class="rounded-md object-cover object-center h-20 w-full" src="${img}">
+    <img class="rounded-md object-cover object-center lg:h-20 w-full" src="${img}">
     `;
     parentContainer.appendChild(childPet);
   });
